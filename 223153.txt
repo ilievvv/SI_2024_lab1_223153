@@ -1,0 +1,56 @@
+1. cd C:\Users\HP\Desktop\SI_2024_lab1_223153
+-Влегуваме во креираниот фолдер
+2. git init во SI_2024_lab1_223153
+- Го иницијализираме git во локалниот репозиториум
+3. git remote add origin https://github.com/ilievvv/SI_2024_lab1_223153.git
+4. nano README.md
+5. git add README.md
+6. git commit -m "Initial commit"
+7. git add *.java
+8. git commit -m "Add starter code"
+9. git branch bug1 
+10. git branch bug2
+11. git checkout bug1  
+12. nano SILab1_1.java
+13. git add SILab1_1.java
+14. git commit -m "Fix wrong condition in filterOddLengthStrings"
+15. git checkout bug2
+16. nano SILab1_2.java
+17. git add SILab1_2.java
+18. git commit -m "Fix wrong condition in makeBigStringFrom"
+19. git checkout bug1 
+20. nano SILab1Main.java
+21. git add SILab1Main.java
+22. git commit -m "Call method filterOddLengthStrings in main class"
+23. git checkout bug2
+24. nano SILab1Main.java
+25. git add SILab1Main.java
+26. git commit -m "Call method makeBigStringFrom in main class"
+27. git push -u origin master
+28. git push -u origin bug1
+29. git push -u origin bug2
+30. git checkout master
+31. git merge bug1
+-Стратегија Fast-forward спојување
+32. git push -u origin master
+33. git push -u origin bug1
+34. git push -u origin bug2
+35. git checkout bug2
+36. git rebase master
+-Појава на конфликт
+37. nano SILab1Main.java
+-Се разрешува со бришење на <<<<< , ===== и >>>>>
+38. git add SILab1Main.java
+39. git commit -m "Call method makeBigStringFrom in main class"
+40. git rebase --continue
+41. git checkout master
+42. git merge bug2
+-Стратегија Fast-forward спојување
+43. git push origin master
+44. git push origin bug1
+45. git push --force origin bug2
+46. git add *.txt
+47. git commit -m "Final commit"
+48. git push -u origin master
+49. git push -u origin bug1
+50. git push -u origin bug2
